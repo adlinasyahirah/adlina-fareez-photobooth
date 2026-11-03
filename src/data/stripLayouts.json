@@ -1,0 +1,5 @@
+{
+  "1": { "width": 1080, "height": 1350, "slots": [{ "x": 108, "y": 184, "width": 864, "height": 623 }] },
+  "2": { "width": 1080, "height": 1920, "slots": [{ "x": 94, "y": 174, "width": 892, "height": 583 }, { "x": 94, "y": 799, "width": 892, "height": 584 }] },
+  "3": { "width": 600, "height": 1800, "slots": [{ "x": 56, "y": 163, "width": 488, "height": 353 }, { "x": 56, "y": 558, "width": 488, "height": 353 }, { "x": 56, "y": 954, "width": 488, "height": 352 }] }
+}
