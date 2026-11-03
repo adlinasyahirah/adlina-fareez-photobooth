@@ -1,4 +1,4 @@
-import { createSaveStripHandler } from '../server/saveStrip.ts'
+import { createSaveStripHandler } from '../server/saveStrip.js'
 
 export const maxDuration = 60
 export default createSaveStripHandler(() => ({
