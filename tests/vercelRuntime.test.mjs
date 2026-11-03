@@ -14,14 +14,13 @@ test('API and shared server compile from root config and execute as production J
   try {
     const config = ts.readConfigFile(join(root, 'tsconfig.json'), ts.sys.readFile)
     const parsed = ts.parseJsonConfigFileContent(config.config, ts.sys, root)
+    assert.deepEqual(parsed.options.types, ['node'], 'The root config must provide Node types to the Vercel compiler')
     const program = ts.createProgram([join(root, 'api/save-strip.ts')], {
       ...parsed.options,
       rootDir: root,
       outDir: output,
       noEmit: false,
       noEmitOnError: true,
-      skipLibCheck: true,
-      types: ['node'],
     })
     const result = program.emit()
     const diagnostics = [...ts.getPreEmitDiagnostics(program), ...result.diagnostics]
